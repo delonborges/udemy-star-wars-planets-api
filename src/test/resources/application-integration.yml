@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:tc:mysql:8.4:///udemy-star-wars-planets?TC_IMAGE_TAG=8.4
+
+  jpa:
+    hibernate:
+      ddl-auto: update

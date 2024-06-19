@@ -1,0 +1,102 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'info.solidsoft.pitest' version '1.15.0'
+    id 'com.adarshr.test-logger' version '4.0.0'
+    id 'org.springframework.boot' version '3.3.0'
+    id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'com.delon'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    implementation 'org.pitest:pitest-junit5-plugin:1.2.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.testcontainers:mysql'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testCompileOnly 'org.projectlombok:lombok'
+}
+
+test {
+    String includeTagsProperty = System.getProperty('includeTags')
+    boolean includeTagsPropertySet = includeTagsProperty != null
+
+    String excludeTagsProperty = System.getProperty('excludeTags')
+    boolean excludeTagsPropertySet = excludeTagsProperty != null
+
+    if (includeTagsPropertySet && excludeTagsPropertySet) {
+        useJUnitPlatform {
+            includeTags includeTagsProperty
+            excludeTags excludeTagsProperty
+        }
+    } else if (includeTagsPropertySet && !excludeTagsPropertySet) {
+        useJUnitPlatform {
+            includeTags includeTagsProperty
+        }
+    } else if (!includeTagsPropertySet && excludeTagsPropertySet) {
+        useJUnitPlatform {
+            excludeTags excludeTagsProperty
+        }
+    } else {
+        useJUnitPlatform()
+    }
+    testlogger {
+        theme 'mocha'
+        showExceptions true
+        showStackTraces true
+        showFullStackTraces false
+        showCauses true
+        slowThreshold 2000
+        showSummary true
+        showSimpleNames false
+        showPassed true
+        showSkipped true
+        showFailed true
+        showStandardStreams false
+        showPassedStandardStreams true
+        showSkippedStandardStreams true
+        showFailedStandardStreams true
+    }
+    jacocoTestReport {
+        dependsOn test
+    }
+    finalizedBy jacocoTestReport
+    pitest {
+        threads = 4
+        pitestVersion = '1.15.2'
+        junit5PluginVersion = '1.2.1'
+        targetClasses = ['com.delon.udemystarwarsplanetsapi.*']
+        outputFormats = ['XML', 'HTML']
+    }
+}

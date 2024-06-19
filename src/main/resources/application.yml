@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/udemy-star-wars-planets?useSSL=false
+    username: username
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
