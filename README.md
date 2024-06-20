@@ -1,5 +1,5 @@
 <h1 align=center>
-  Star Wars Planet API (udemy-star-wars-planets-api)
+  Star Wars Planet API
 </h1>
 
 <p align=center>
@@ -10,25 +10,25 @@
 </p>
 
 <p align=center>
-  <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/delonborges/udemy-star-wars-planets-api/.github%2Fworkflows%2Fgradle.yml?logo=githubactions&logoColor=white&label=workflow">
-  <a alt="Udemy" href="https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/"><img src="https://img.shields.io/badge/Udemy-EC5252?logo=Udemy&logoColor=white&labelColor=purple&color=purple" https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/ /></a>
+  <a href="https://github.com/delonborges/udemy-star-wars-planets-api/actions"> <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/delonborges/udemy-star-wars-planets-api/.github%2Fworkflows%2Fgradle.yml?style=flat-square&logo=githubactions&logoColor=white&label=workflow"></a>
+  <a href="https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/"> <img alt="Udemy" src=https://img.shields.io/badge/Udemy-EC5252?style=flat-square&logo=Udemy&logoColor=white&labelColor=purple&color=purple&https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/></a>
 </p>
 
 <br>
 
 ## ✨ Technologies
 
-- [Mysql](https://dev.mysql.com/downloads/mysql/)
 - [Java](https://www.oracle.com/java/technologies/downloads/)
-- [Maven](https://maven.apache.org/download.cgi)
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Spring Testing](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing-introduction)
+- [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
 - [JUnit 5](https://junit.org/junit5/docs/current/user-guide/)
-- [Mockito](https://site.mockito.org)
 - [AssertJ](https://github.com/assertj/assertj)
 - [Hamcrest](http://hamcrest.org/JavaHamcrest/)
+- [Mockito](https://site.mockito.org)
 - [Jacoco](https://github.com/jacoco/jacoco)
 - [Pitest](https://pitest.org)
+- [MySQL](https://dev.mysql.com/downloads/mysql/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Testing](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing-introduction)
 
 ## 💻 Projeto
 
