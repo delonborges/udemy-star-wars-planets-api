@@ -1,17 +1,17 @@
-<h1 style=text-align:center>
+<h1 align=center>
   Star Wars Planet API (udemy-star-wars-planets-api)
 </h1>
 
-<p style=text-align:center>
+<p align=center>
   <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-configuration">Configuração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-developing">Construir e Executar</a>
 </p>
 
-<p style=text-align:center>
-  <a href="https://github.com/delonborges/udemy-star-wars-planets-api"><img src="https://img.shields.io/badge/GitHub-100000?logo=GitHub" alt="Udemy"/></a>
-  <a href="https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/"><img src="https://img.shields.io/badge/Udemy-EC5252?logo=Udemy&logoColor=white&labelColor=purple&color=purple" alt="Udemy"/></a>
+<p align=center>
+  <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/delonborges/udemy-star-wars-planets-api/.github%2Fworkflows%2Fgradle.yml?logo=githubactions&logoColor=white&label=workflow">
+  <a alt="Udemy" href="https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/"><img src="https://img.shields.io/badge/Udemy-EC5252?logo=Udemy&logoColor=white&labelColor=purple&color=purple" https://www.udemy.com/certificate/UC-e1ede4fc-1ce7-46ca-a126-602bd1d19647/ /></a>
 </p>
 
 <br>
@@ -79,5 +79,5 @@ $ gradle clean test -DincludeTags="integration"
 ```
 ```sh
 ~/ Testes mutantes:
-$ gradle piteste
+$ gradle pitest
 ```
